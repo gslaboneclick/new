@@ -6,7 +6,7 @@ import json
 content_type="application/xml; charset=utf-8"
 
 
-def migrate(ip,user,passwd):
+def migrate(ip, user, passwd):
     
     veeamIp= ip
     veeamUsername= user
@@ -22,11 +22,11 @@ def migrate(ip,user,passwd):
     
     vmwarePolicyName=jobDetails['Name']
     
-    storageName=""# call getStorage method from nbuMain file.
+    storageName = ""# call getStorage method from nbuMain file.
     
     client= jobDetails['JobInfo']['BackupJobInfo']['Includes']['ObjectInJobs']   
     for i in client:
-        client=i['Name']
+        client = i['Name']
 
 
 
